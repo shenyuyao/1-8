@@ -1,0 +1,17 @@
+include ./includes/header.jade
+    div.container
+        div.row
+            div.col-md-7
+                embed(src="#{movie.flash}" allowFullScreen="true" quality="high" width="620px" height="476px" align="middle")
+            div.col-md-5
+                dl.dl-horizontal
+                    dt 电影名称
+                    dd #{movie.title}
+                    dt 导演
+                    dd #{movie.director}
+                    dt 年份
+                    dd #{movie.year}
+                    dt 语言
+                    dd #{movie.language}
+                    dt 简介
+                    dd #{movie.summary}

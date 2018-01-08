@@ -1,0 +1,25 @@
+include ./includes/header.jade
+    div.container
+        div.row
+            table.table.table-hover.table-border
+                thead
+                    th 电影名称
+                    th 导演
+                    th 国家
+                    th 上映年份
+                    th 查看
+                    th 更新
+                    th 删除
+                tbody
+                    -for(var i =0;i<movies.length;i++)
+                        tr.item-id-1
+                            td #{movies[i].title}
+                            td #{movies[i].director}
+                            td #{movies[i].country}
+                            td #{movies[i].year}
+                            td
+                                a(target="_blank" href="../detail/#{movies[i]._id}") 查看
+                            td
+                                button.btn.btn-danger 修改
+                            td
+                                button.button.btn-warnning.del 删除

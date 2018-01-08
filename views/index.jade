@@ -1,0 +1,11 @@
+include ./includes/header.jade
+    div.container
+        div.row
+            -for(var i =0;i<movies.length;i++)
+                div.col-md-3
+                    div.thumbnail
+                        img(src='#{movies[i].poster}')
+                    div.caption
+                        h3 #{movies[i].title}
+                        p
+                            a(href='/detail/#{movies[i]._id}' class='btn btn-primary') 观看影片
